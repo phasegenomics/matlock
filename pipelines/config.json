@@ -1,0 +1,34 @@
+{
+        "threads"  : "5",
+         "samples" : {
+                 "rep1" : {
+                 "read_group"   :  "-R '@RG\tID:rep1\tSM:GM12878' ",
+                 "reads" : {
+                         "R1" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep1_R1.fastq",
+                         "R2" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep1_R2.fastq",
+                         },
+                    },
+                 "rep2" : {
+                 "read_group"   :  "-R '@RG\tID:rep2\tSM:GM12878' ",
+                 "reads" : {
+                         "R1" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep2_R1.fastq",
+                         "R2" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep2_R2.fastq",
+                         },
+                    },
+                 "rep3" : {
+                 "read_group"   :  "-R '@RG\tID:rep3\tSM:GM12878' ",
+                 "reads" : {
+                         "R1" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep3_R1.fastq",
+                         "R2" : "/net/eichler/vol25/projects/great_apes/nobackups/Hic_data/GM12878/GM12878rep3_R2.fastq",
+                              },
+                    },
+           },
+           "local_path"   : "$TMPDIR",
+           "bwa_prefix"   : "/net/eichler/vol8/home/zevk/tools/bwa/bwa mem ",
+           "bwa_special"  : " -t 5 -5 ",
+           "reference"    : "/net/eichler/vol2/eee_shared/assemblies/hg38/indexes/bwa_0.7.3/hg38.fasta",
+           "cluster_settings"  : {
+                               "heavy" : "-l h_rt=48:00:00 -l mfree=5G -q eichler-short.q -l disk_free=10G -pe serial 5",
+                               "lite" : "-l h_rt=48:00:00 -l mfree=20G -q eichler-short.q"
+                               }
+}
