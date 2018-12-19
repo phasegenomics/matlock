@@ -89,8 +89,8 @@ int parse_target_list(bam_hdr_t *header){
 		fprintf(stderr, "WARNING : no sequences in bam header : in : %s\n", __func__);
 	}
 
-    // strtok will cause a seg fault if you giv it a NULL at least for Unbuntu
-    if(bamfilt_global_opts.exclude_str == NULL) return 0;
+ 	// strtok will cause a seg fault if you giv it a NULL at least for Unbuntu
+ 	if(bamfilt_global_opts.exclude_str == NULL) return 0;
 
 	char * pch = strtok (bamfilt_global_opts.exclude_str,",");
 	uint32_t nseq = 0;
